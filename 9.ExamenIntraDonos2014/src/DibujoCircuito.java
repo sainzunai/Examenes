@@ -45,6 +45,28 @@ public class DibujoCircuito {
 	private static Color COLOR_SELECCION = Color.orange;
 	private static Stroke STROKE_SELECCION = new BasicStroke(7);
 
+	
+	
+
+	public ArrayList<Point> getlPuntos() {
+		return lPuntos;
+	}
+
+	public void setlPuntos(ArrayList<Point> lPuntos) {
+		this.lPuntos = lPuntos;
+	}
+
+	public ArrayList<TextoDeCircuito> gettPuntos() {
+		return tPuntos;
+	}
+
+	public void settPuntos(ArrayList<TextoDeCircuito> tPuntos) {
+		this.tPuntos = tPuntos;
+	}
+
+	public Point getMarcaPunto() {
+		return marcaPunto;
+	}
 
 	/** Crea el objeto de datos de dibujo del circuito
 	 * @param nombreFic	Nombre del fichero gráfico de fondo
