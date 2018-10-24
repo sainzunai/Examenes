@@ -28,6 +28,9 @@ public class DibujoCircuitoTest {
 		
 		//PREGUNTAR EN CLASE: SI HAGO ASSERT NULL DE LA POSICION 1 DE LA LISTA DA ERROR, NO DEBERIA HABER ELEMENTO EN LA POSICION 1¿?¿?¿?¿?
 		
+		
+		dC.addPunto(new Point(410, 410));
+		assertTrue(dC.getlPuntos() != lTemp);
 	}
 
 }
