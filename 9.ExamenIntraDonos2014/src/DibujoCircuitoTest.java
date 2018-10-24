@@ -14,7 +14,7 @@ public class DibujoCircuitoTest {
 	DibujoCircuito dC = new DibujoCircuito("circuito1.jpg");
 	@Before
 	public void setUp(){
-		dC.addPunto(new Point(10, 10));
+		dC.addPuntoSiProcede(new Point(10, 10));
 	}
 	
 	
@@ -23,14 +23,16 @@ public class DibujoCircuitoTest {
 		//hago una copia de la lista de puntos para compararla despues
 		ArrayList<Point> lTemp = dC.getlPuntos();
 		//en la lista ya hay un pto en el 10, 10. voy a hacerlo en el 11,11. no deberia anyadirse
-		dC.addPunto(new Point(11, 11));
-		assertEquals(lTemp, dC.getlPuntos());	//en el 1 no deberia haber nada
+		dC.addPuntoSiProcede(new Point(11, 11));
+		assertEquals(lTemp, dC.getlPuntos());	
 		
-		//PREGUNTAR EN CLASE: SI HAGO ASSERT NULL DE LA POSICION 1 DE LA LISTA DA ERROR, NO DEBERIA HABER ELEMENTO EN LA POSICION 1¿?¿?¿?¿?
+//		assertNull(dC.getlPuntos().get(1));			//en el 1 no deberia haber nada NO DEBERIA DUNCIONAR¿?¿?
+
 		
+		dC.addPuntoSiProcede(new Point(410, 410));
+		assertTrue(dC.getlPuntos() != lTemp);	//NO TIENE SENTIDO, PREGUNTAR¿??¿¿?¿?¿?
+//		assertTrue(lTemp.size() == 1);
 		
-		dC.addPunto(new Point(410, 410));
-		assertTrue(dC.getlPuntos() != lTemp);
 	}
 
 }
